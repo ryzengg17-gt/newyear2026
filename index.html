@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- ======================================================
+         BASIC META
+    ======================================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to 2026</title>
+
+    <!-- ======================================================
+         GOOGLE FONTS (ELEGANT, CLEAN)
+    ======================================================= -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ======================================================
+         STYLE (INLINE KHUSUS HALAMAN UTAMA)
+         NOTE: STYLE INI SENGAJA TENANG & ELEGAN
+    ======================================================= -->
+    <style>
+        /* ================= RESET ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ================= BODY ================= */
+        body {
+            min-height: 100vh;
+            background: linear-gradient(
+                180deg,
+                #0f2027 0%,
+                #203a43 50%,
+                #2c5364 100%
+            );
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ================= BACKGROUND GLOW ================= */
+        .bg-glow {
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06), transparent 40%),
+                radial-gradient(circle at 80% 30%, rgba(255,255,255,0.04), transparent 45%),
+                radial-gradient(circle at 50% 80%, rgba(255,255,255,0.05), transparent 50%);
+            z-index: 0;
+            animation: slowGlow 25s ease-in-out infinite alternate;
+        }
+
+        @keyframes slowGlow {
+            from { opacity: 0.4; }
+            to   { opacity: 0.8; }
+        }
+
+        /* ================= WRAPPER ================= */
+        .wrapper {
+            position: relative;
+            z-index: 5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* ================= SMALL LABEL ================= */
+        .label {
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            opacity: 0.75;
+            margin-bottom: 18px;
+            animation: fadeDown 1.5s ease;
+            font-size:20px;
+        }
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-15px);
+            }
+            to {
+                opacity: 0.75;
+                transform: translateY(0);
+            }
+        }
+
+        /* ================= MAIN TITLE ================= */
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            animation: fadeUp 1.8s ease;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ================= SUBTITLE ================= */
+        .subtitle {
+            max-width: 680px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            opacity: 0.85;
+            margin-bottom: 45px;
+            animation: fadeUp 2.2s ease;
+            font-weight:600;
+        }
+
+        /* ================= DIVIDER ================= */
+        .divider {
+            width: 120px;
+            height: 1px;
+            background: linear-gradient(
+                to right,
+                transparent,
+                rgba(255,255,255,0.6),
+                transparent
+            );
+            margin: 35px 0;
+        }
+
+        /* ================= BUTTON ================= */
+        .enter-btn {
+            margin-top: 15px;
+            padding: 16px 44px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: #0f2027;
+            background: linear-gradient(
+                135deg,
+                #ffffff,
+                #e6e6e6
+            );
+            border-radius: 40px;
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.25),
+                inset 0 1px 1px rgba(255,255,255,0.6);
+            transition: all 0.35s ease;
+        }
+
+        .enter-btn:hover {
+            transform: translateY(-4px);
+            box-shadow:
+                0 18px 40px rgba(0,0,0,0.35),
+                inset 0 1px 1px rgba(255,255,255,0.8);
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.4rem;
+            }
+
+            .subtitle {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 2rem;
+            }
+
+            .enter-btn {
+                padding: 14px 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BACKGROUND GLOW -->
+    <div class="bg-glow"></div>
+
+    <!-- MAIN CONTENT -->
+    <div class="wrapper">
+
+        <!-- LABEL -->
+        <div class="label">
+            WELCOME
+        </div>
+
+        <!-- TITLE -->
+        <h1 class="title">
+            A New Chapter Begins<br>
+            in Twenty Twenty-Six
+        </h1>
+
+        <!-- DIVIDER -->
+        <div class="divider"></div>
+
+        <!-- SUBTITLE -->
+        <p class="subtitle">
+            Tahun baru bukan hanya tentang pergantian angka,  
+            tetapi tentang kesempatan baru, harapan baru,  
+            dan langkah baru menuju masa depan yang lebih baik.
+        </p>
+
+        <!-- BUTTON -->
+        <a href="surprise.html" class="enter-btn">
+            ENTER THE CELEBRATION
+        </a>
+
+        <!-- FOOTER -->
+        <footer>
+            © 2026 • By Ryzen Dev
+        </footer>
+
+    </div>
+
+</body>
+</html>
